@@ -1,0 +1,2 @@
+ALTER TABLE contract
+ADD COLUMN Status VARCHAR(50) NOT NULL DEFAULT 'Pending';
