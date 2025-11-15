@@ -52,19 +52,27 @@ The backend enforces key business rules using specific MySQL elements:
 * Python 3.x
 * MySQL Server (accessible via `localhost` in the default configuration)
 
+---
+
 ### Step 1: Database Setup (MySQL)
 1.  Create the database: `CREATE DATABASE tender;`
-2.  Create all necessary tables (`user`, `vendor`, `tender`, `bid`, `contract`, `evaluation`).
-3.  Execute the code to create all Stored Procedures (SP1-SP4), Functions (FN1, FN2, FN4), and the Trigger (T5) in your MySQL environment.
+2.  Create all necessary tables and ensure all Stored Procedures (SP1-SP4), Functions (FN1, FN2, FN4), and the Trigger (T5) are executed in your MySQL environment.
+
+---
 
 ### Step 2: Python Environment
-1.  Install required Python packages:
+
+1.  First, install all required Python packages using the **`requirements.txt`** file provided below:
     ```bash
-pip install streamlit mysql-connector-python pandas
+pip install -r requirements.txt
     ```
+    (Alternatively, you can install manually: `pip install streamlit mysql-connector-python pandas`)
+
+---
 
 ### Step 3: Configuration Update
-1.  Open the `streamlit_app.py` file.
+
+1.  Open the **`streamlit_app.py`** file.
 2.  Update the database credentials inside the `get_db_connection()` function:
     ```python
 db_config = {
@@ -75,13 +83,15 @@ db_config = {
 }
     ```
 
+---
+
 ### Step 4: Run the Application
+
 1.  Execute the Streamlit application from your terminal:
     ```bash
 streamlit run streamlit_app.py
     ```
-
----
+    ---
 
 ## 👤 Default Roles for Testing
 
