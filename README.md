@@ -76,7 +76,8 @@ db_config = {
 
 ### Step 4: Run the Application
 1.  Execute the Streamlit application from your terminal:
-    ```bash
+    bash
+    ```
 streamlit run streamlit_app.py
     ```
 
